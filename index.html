@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+  <title>Frontend Mentor | Interactive rating component</title>
+
+
+</head>
+
+<body>
+  <main>
+    <div class="container flex">
+
+      <div class="card flex" id="evaluation">
+        <div class="circle-icon"><img src="images/icon-star.svg" alt="icon-star"></div>
+        <!-- Rating state start -->
+        <h1 class="card-title">How did we do?</h1>
+        <p> Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+        <!-- input to know how many starts support gets -->
+        <div class="card-rating flex">
+          <!-- All radio input have the same name so you can check just one  -->
+          <div class="circle">
+            <input type="radio" id="1" name="input-rating" value="1">
+            <label for="1">1</label>
+          </div>
+          <div class="circle">
+            <input type="radio" id="2" name="input-rating" value="2">
+            <label for="2">2</label>
+          </div>
+          <div class="circle">
+            <input type="radio" id="3" name="input-rating" value="3">
+            <label for="3">3</label>
+          </div>
+          <div class="circle">
+            <input type="radio" id="4" name="input-rating" value="4">
+            <label for="4">4</label>
+          </div>
+          <div class="circle">
+            <input type="radio" id="5" name="input-rating" value="5">
+            <label for="5">5</label>
+          </div>
+        </div>
+
+        <!-- Function on button click -->
+        <button type="submit" id="btn" onclick="showCard()">Submit</button>
+      </div>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <div class="card flex" id="thank-you">
+        <img src="images/illustration-thank-you.svg" class="card__img" alt="illustration-thank-you" srcset="">
+
+        <p class="text-center card-choice"> You select
+          <span class="choice">$input-rating </span>out of 5
+        </p>
+        <h1 class="text-center"> Thank you! </h1>
+        <p class="text-center">
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!</p>
+      </div>
+
+      <!-- Thank you state end -->
+
+    </div>
+
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Emanuele Del Monte</a>.
+  </div>
+  <script src="./script/index.js"></script>
+
+</body>
+
+</html>
