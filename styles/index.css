@@ -59,6 +59,12 @@ body {
   background-color: #141519;
 }
 
+label {
+  cursor: pointer;
+  /* to get the click input on the whole circle, not only in the center */
+  padding: 1em;
+}
+
 /* ---------------------- */
 /* Utility classes        */
 /* ---------------------- */
@@ -77,19 +83,89 @@ body {
   display: flex;
 }
 
-.circle-icon {
+.circle {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 2em;
   max-height: 2em;
   padding: 1.5em;
-
   border-radius: 50%;
   background-color: var(--clr-dark-blue);
 }
 
-.circle {
+/* ---------------------- */
+/* Buttons                */
+/* ---------------------- */
+
+#btn {
+  border-radius: 4em;
+  margin-top: 2em;
+  padding: 1em 2em;
+  border-style: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--ff-main);
+  font-weight: 700;
+  background-color: var(--clr-orange);
+  color: var(--clr-white);
+  cursor: pointer;
+  transition: all 250ms;
+  width: 100%;
+}
+
+#btn:hover {
+  color: var(--clr-orange);
+  background-color: var(--clr-white);
+}
+
+#btn:active {
+  transform: translateY(2px);
+}
+
+/* ---------------------- */
+/* Components             */
+/* ---------------------- */
+
+/* card components */
+.card {
+  max-width: 27rem;
+  /* background-color: var(--clr-dark-blue); */
+  background-image: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+  border-radius: 2em;
+  padding: 3em;
+
+  justify-content: center;
+  flex-direction: column;
+
+  -webkit-box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.45);
+}
+
+.card__rating {
+  justify-content: center;
+  flex-direction: row;
+  margin-block: 1em;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.card__choice {
+  color: var(--clr-orange);
+  background-color: var(--clr-dark-blue);
+  border-radius: 4em;
+  padding: 0.5em 0.75em;
+  width: max-content;
+  margin-top: 2em;
+  margin-inline: auto;
+}
+
+.card__img {
+  margin: auto;
+  max-width: 200px;
+}
+
+.circle-number {
   max-width: 2em;
   max-height: 2em;
   padding: 1.5em;
@@ -108,114 +184,28 @@ body {
   justify-content: center;
 }
 
-.circle:hover {
+.circle-number:hover {
   background-color: var(--clr-light-grey);
   color: var(--clr-white);
 }
 
-.circle:active {
+.circle-number:active {
   background-color: var(--clr-orange);
   color: var(--clr-white);
-}
-
-/* .circle:last-child {
-  margin-right: 0;
-} */
-
-/* input {
-  background-color: var(--clr-orange);
-  padding: 2em;
-} */
-
-/* input:checked {
-  background: var(--clr-orange);
-  color: var(--clr-orange);
-} */
-
-/* ---------------------- */
-/* Components             */
-/* ---------------------- */
-
-label {
-  cursor: pointer;
 }
 
 input {
+  margin: 0;
   position: absolute;
   border: 0;
   transform: scale(4);
-  align-items: center;
-  justify-content: center;
+  /* hide radio buttons */
   visibility: hidden;
 }
 
-#evaluation {
-  display: block;
-}
-
-.card {
-  max-width: 27rem;
-  /* background-color: var(--clr-dark-blue); */
-  background-image: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
-  border-radius: 2em;
-  padding: 3em;
-
-  justify-content: center;
-  flex-direction: column;
-
-  -webkit-box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.45);
-}
-
-.card-rating {
-  justify-content: center;
-  flex-direction: row;
-  margin-block: 1em;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-/* Buttons */
-
-#btn {
-  border-radius: 4em;
-  margin-top: 2em;
-  padding: 1em 2em;
-  border-style: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-family: var(--ff-main);
-  font-weight: 700;
-  background-color: var(--clr-orange);
-  color: var(--clr-white);
-  cursor: pointer;
-  transition: all 250ms;
-  width: 100%;
-}
-
-#btn:active {
-  color: var(--clr-orange);
-  background-color: var(--clr-white);
-}
-
-/* Second card */
+/* to hide second card */
 #thank-you {
   display: none;
-}
-
-.card-choice {
-  color: var(--clr-orange);
-  background-color: var(--clr-dark-blue);
-  border-radius: 4em;
-  padding: 0.5em 0.75em;
-  width: max-content;
-  margin-top: 2em;
-  margin-inline: auto;
-}
-
-.card__img {
-  margin: auto;
-  max-width: 200px;
 }
 
 .attribution {
@@ -232,5 +222,8 @@ input {
 /* Media queries          */
 /* ---------------------- */
 
-/* @media (min-width: 720px) {
-} */
+@media (min-width: 720px) {
+  .card {
+    max-width: 35%;
+  }
+}

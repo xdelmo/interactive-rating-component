@@ -18,38 +18,38 @@
     <div class="container flex">
 
       <div class="card flex" id="evaluation">
-        <div class="circle-icon"><img src="images/icon-star.svg" alt="icon-star"></div>
+        <div class="circle "><img src="images/icon-star.svg" alt="icon-star"></div>
         <!-- Rating state start -->
-        <h1 class="card-title">How did we do?</h1>
+        <h1>How did we do?</h1>
         <p> Please let us know how we did with your support request. All feedback is appreciated
           to help us improve our offering!</p>
         <!-- input to know how many starts support gets -->
-        <div class="card-rating flex">
+        <div class="card__rating flex">
           <!-- All radio input have the same name so you can check just one  -->
-          <div class="circle">
+          <div class="circle circle-number">
             <input type="radio" id="1" name="input-rating" value="1">
             <label for="1">1</label>
           </div>
-          <div class="circle">
+          <div class="circle circle-number">
             <input type="radio" id="2" name="input-rating" value="2">
             <label for="2">2</label>
           </div>
-          <div class="circle">
+          <div class="circle circle-number">
             <input type="radio" id="3" name="input-rating" value="3">
             <label for="3">3</label>
           </div>
-          <div class="circle">
+          <div class="circle circle-number">
             <input type="radio" id="4" name="input-rating" value="4">
             <label for="4">4</label>
           </div>
-          <div class="circle">
+          <div class="circle circle-number">
             <input type="radio" id="5" name="input-rating" value="5">
             <label for="5">5</label>
           </div>
         </div>
 
         <!-- Function on button click -->
-        <button type="submit" id="btn" onclick="showCard()">Submit</button>
+        <button type="submit" id="btn">Submit</button>
       </div>
       <!-- Rating state end -->
 
@@ -57,8 +57,8 @@
       <div class="card flex" id="thank-you">
         <img src="images/illustration-thank-you.svg" class="card__img" alt="illustration-thank-you" srcset="">
 
-        <p class="text-center card-choice"> You select
-          <span class="choice">$input-rating </span>out of 5
+        <p class="text-center card__choice"> You select
+          <span id="choice"></span> out of 5
         </p>
         <h1 class="text-center"> Thank you! </h1>
         <p class="text-center">
@@ -75,7 +75,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Emanuele Del Monte</a>.
+    Coded by <a href="https://github.com/xdelmo" target="_blank">Emanuele Del Monte</a>.
   </div>
   <script src="./script/index.js"></script>
 
