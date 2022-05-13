@@ -24,11 +24,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/screenshot.png)
+![screenshot](./screenshots/screenshot.png)
 
 ### Links
 
-- Live Site URL: [htmlpreview](https://htmlpreview.github.io/?https://github.com/xdelmo/interactive-rating-component/blob/master/index.html)
+- Live Site URL: [@GitHub](https://htmlpreview.github.io/?https://github.com/xdelmo/interactive-rating-component/blob/master/index.html)
 
 ### Built with
 
@@ -90,4 +90,4 @@ I'd like to mantain orange background on the radio button checked, not only on c
 ## Author
 
 - Website - [Emanuele Del Monte](https://www.emanueledelmonte.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/xdelmo)
+- Frontend Mentor - [@xdelmo](https://www.frontendmentor.io/profile/xdelmo)
